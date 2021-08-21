@@ -1,0 +1,158 @@
+:root{
+    --deslocamento: 0;
+}
+
+.featured{
+    height: 100vh;
+}
+
+.featured--vertical{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.featured--horizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #111 30%, transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    padding-bottom: 150px;
+    padding-top: 70px;
+}
+
+.featured--name{
+    font-size: 3.5rem;
+    font-weight: 500;
+    animation: Displacement ;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    transform-origin: bottom left;
+    position: relative;
+}
+
+@keyframes Displacement {
+    0%   {transform: translate(0, 0) scale(1);}
+    10%   {color: var(--deslocamento)} /* -- MISTERIOS DA FÉ -- Não remova isso aqui -- */
+    12%   {transform: translate(0, var(--deslocamento)) scale(.8); }
+    90%   {transform: translate(0, var(--deslocamento)) scale(.8); }
+    100%   {transform: translate(0, 0) scale(1);}
+}
+
+.featured--fade{
+    animation: Fade ;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-delay: 5s;
+    transform-origin: bottom left;
+}
+
+@keyframes Fade {
+    0%   {transform: translate(0, 0); opacity: 1; }
+    5%   {transform: translate(0, var(--deslocamento)); opacity: 0; }
+    93%   {transform: translate(0, var(--deslocamento)); opacity: 0; }
+    100%   {transform: translate(0, 0); opacity: 1; }
+}
+
+.featured--info{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.featured--year,
+.featured--seasons,
+.featured-points{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.featured-points{
+    color: #46d369;
+}
+
+.featured--description{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #999;
+    max-width: 40%;
+}
+
+.featured--buttons{
+    margin-top: 20px;
+}
+
+.featured--watchbutton,
+.featured--listbutton{
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    opacity: 1;
+    transition: all ease-in-out .2s;
+    cursor: pointer; 
+    display: inline-flex;
+    align-items: center;
+}
+
+.featured--watchbutton:hover,
+.featured--listbutton:hover{
+    opacity: .7;
+}
+
+.featured--watchbutton{
+    background: #fff;
+    color: #000; 
+}
+
+.featured--listbutton{
+    background-color: rgba(109,109,110,0.7);
+    color: #fff;
+}
+
+.featured--genres{
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #999;
+}
+.featured--watchbutton--icon,
+.featured--listbutton--icon{
+    font-size: 2rem!important;
+    margin-right: 10px;
+}
+
+@media (max-width:760px){
+    .featured{
+        height: 90vh;
+    }
+    .featured--name{
+        font-size: 2.5rem;
+    }
+    .featured--info{
+        font-size: 1.2rem;
+    }
+    .featured--description{
+        font-size: 1rem;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+    .featured--watchbutton,
+    .featured--listbutton{
+        font-size: 1rem;
+        padding: 10px 15px;
+    }   
+    .featured--genres{
+        font-size: 1.2rem;
+    }
+    .featured--watchbutton--icon,
+    .featured--listbutton--icon{
+        font-size: 1.5rem!important;
+    }
+}

@@ -1,0 +1,97 @@
+header{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    background: transparent;
+    transition: all ease-in-out .5s;
+}
+
+header.header--black{
+    background: #111;
+}
+
+.header--logo{
+    
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header--logo img{
+    height: 25px;
+}
+
+.header--logo ul{
+    display: flex
+}
+
+.header--logo ul li{
+    list-style: none;
+}
+
+.header--logo ul li a{
+    font-size: .9rem;
+}
+
+.header--menu{
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+.header--menu a:hover{
+    color: rgba(255, 255, 255, 0.432);
+}
+
+.header--user{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.header--search,
+.header--role,
+.header--notifications,
+.header--notifications, 
+.header--avatar{
+    padding-left: 15px;  
+}
+
+.header--search a,
+.header--role a,
+.header--notifications a,
+.header--notifications a, 
+.header--avatar a{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.header--avatar img{
+    height: 100%;
+    border-radius: 3px;
+}
+.header--avatar a{
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+.header--avatar a span{
+    margin-left: 15px;
+}
+
+.header--detail{
+    color: #fff;
+}
